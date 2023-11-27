@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
-import { BannerSidebar } from "../components/banner/banner-sidebar";
 import LayoutProvider from "@theme/Layout/Provider";
 import {CommonHeader} from "./common-header";
 
@@ -29,29 +28,6 @@ export const CustomBlogLayout = (props: any) => {
             >
                 <div
                     className={clsx(
-                        "relative",
-                        "w-[264px]",
-                        "pl-4",
-                        "py-10 blog-sm:py-12 blog-md:py-16",
-                        "hidden xl:block",
-                        "opacity-0",
-                        "transition-opacity duration-300 ease-in-out",
-                    )}
-                >
-                    <div
-                        className={clsx(
-                            "sticky",
-                            "w-[264px]",
-                            "z-[1]",
-                            "top-32",
-                            "left-0",
-                        )}
-                    >
-                        <BannerSidebar shouldShowBanner={shouldShowBanner} />
-                    </div>
-                </div>
-                <div
-                    className={clsx(
                         "refine-prose",
                         "flex-1",
                         "min-w-0",
@@ -72,7 +48,6 @@ export const CustomBlogLayout = (props: any) => {
                     </div>
                 )}
             </div>
-            {/*<CommonFooter />*/}
         </LayoutProvider>
         // </Layout>
     );

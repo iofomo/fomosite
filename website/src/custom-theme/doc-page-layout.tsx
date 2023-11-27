@@ -1,7 +1,6 @@
 import React from "react";
 import { DocSidebar } from "./doc-sidebar";
 import clsx from "clsx";
-import { CommonFooter } from "./common-footer";
 import {CommonHeader} from "./common-header";
 // import { DocHeader } from "./doc-header";
 
@@ -21,7 +20,7 @@ export const DocPageLayout = ({ children }: Props) => {
                 <DocSidebar />
                 {children}
             </div>
-            <CommonFooter />
+            {/*<CommonFooter />*/}
         </>
     );
 };
