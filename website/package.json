@@ -1,0 +1,58 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.0.0",
+    "@docusaurus/preset-classic": "3.0.0",
+    "@headlessui/react": "^1.7.17",
+    "tailwindcss": "^3.3.5",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^1.2.1",
+    "@ionic-internal/ionic-ds": "^7.0.0",
+    "@prismicio/client": "^6.4.2",
+    "@prismicio/react": "^2.2.0",
+    "react": "^18.0.0",
+    "docusaurus-plugin-module-alias": "^0.0.2",
+    "docusaurus-plugin-sass": "^0.2.1",
+    "sass": "^1.44.0",
+    "modern-normalize": "^1.1.0",
+    "react-dom": "^18.0.0",
+    "react-lazy-load-image-component": "^1.5.4",
+    "react-spring": "^9.4.5",
+    "docusaurus-lunr-search": "^2.1.0",
+    "react-share": "^4.4.0",
+    "title-case": "^3.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "@docusaurus/module-type-aliases": "3.0.0",
+    "@docusaurus/types": "3.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
+  }
+}

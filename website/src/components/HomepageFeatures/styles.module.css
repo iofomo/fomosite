@@ -1,0 +1,28 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  /*height: 200px;*/
+  max-width: 400px;
+  width: 50%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 50%;
+  max-width: 500px;
+}
+
+.text {
+  width: 50%;
+  max-width: 500px;
+  padding: 20px;
+}

@@ -1,0 +1,10 @@
+{
+  "sidebar.docs.desktop.tinyui.intro": {
+    "message": "从零开始",
+    "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.desktop.tinyui.Develop guide": {
+    "message": "核心概念",
+    "description": "The label for category Concepts in sidebar docs"
+  }
+}

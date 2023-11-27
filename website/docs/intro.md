@@ -1,27 +1,12 @@
-<p align="center">
-  <a href="#">
-    <img alt="wing" src="doc/README.assets/1.png" width="300" />
-  </a>
-</p>
+---
+sidebar_position: 1
+---
 
-<p align="center">
-    <img src="doc/README.assets/npm.svg" alt="license:MIT" />
-    <img src="doc/README.assets/yarn.svg" alt="python:2x3x" />
-</p>
+### Introduce
 
+This website is built using [Docusaurus 3](https://v3.docusaurus.io/), a modern static website generator.
 
-### Instruction
-
-This website is built using [Docusaurus 3](https://v3.docusaurus.io/), a modern static website generator. 
-
-This is our first web development, and it is because of the following open-source project that we have our own website.
-
--   [refine](https://refine.dev/)
--   [apisix](https://apisix.apache.org/)
-
-This is our official website [iofomo](https://www.iofomo.com) .
-
-![](doc/README.assets/2.png)
+Goto [fomosite](https://www.iofomo.com)
 
 ### Get Start
 
