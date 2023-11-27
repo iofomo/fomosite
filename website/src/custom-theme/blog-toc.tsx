@@ -90,6 +90,7 @@ export const BlogTOC = (props) => {
                 "max-w-[280px]",
                 "overflow-auto",
                 "h-[calc(100vh-67px)]",
+                "scrollbar-hidden",
                 "px-3",
                 "blog-md:py-16",
                 "border-l dark:border-l-gray-700 border-l-gray-100",

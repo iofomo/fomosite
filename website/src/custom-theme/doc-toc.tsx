@@ -97,6 +97,7 @@ export const DocTOC = () => {
                 "max-w-[280px]",
                 "overflow-auto",
                 "h-[calc(100vh-67px)]",
+                "scrollbar-hidden",
                 "pl-3",
                 "pr-3",
                 "py-12",

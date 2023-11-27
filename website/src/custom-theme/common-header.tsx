@@ -61,14 +61,15 @@ export const CommonHeader = ({ trackProgress }: Props) => {
                     >
                         <div
                             className={clsx(
-                                "w-[130px]",
-                                "landing-lg:w-[200px]",
+                                "w-[70px]",
+                                "landing-lg:w-[70px]",
                             )}
                         >
                             <Link to="/">
                                 <img src="/img/logo.png" className="text-gray-900 dark:text-gray-0" />
                             </Link>
                         </div>
+                        <div style={{ width: '40px', height: '100%' }}></div>
                         <div
                             className={clsx(
                                 "hidden landing-md:flex",

@@ -96,6 +96,7 @@ export const BlogPostPageView = ({ children }) => {
                     <MDXContent>{children}</MDXContent>
                 </div>
             </div>
+            <div style={{ width: '100%', height: '40px' }}></div>
             <PostPaginator posts={metadata} />
         </BlogPostItemContainer>
     );

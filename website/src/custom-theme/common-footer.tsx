@@ -27,7 +27,7 @@ export const CommonFooter = () => {
                         "mt-4 sm:mt-0",
                     )}
                 >
-                    refine © 2023
+                    iofomo © 2023
                 </div>
 
                 <div

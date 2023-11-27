@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import { BannerSidebar } from "../components/banner/banner-sidebar";
-import { useLocation } from "@docusaurus/router";
-import useScrollTracker from "../hooks/use-scroll-tracker";
-import Layout from "@theme/Layout";
-import {CommonLayout} from "./common-layout";
 import LayoutProvider from "@theme/Layout/Provider";
 import {CommonHeader} from "./common-header";
 
 export const CustomBlogLayout = (props: any) => {
     const { children, toc, ...layoutProps } = props;
     const shouldShowBanner = false;
-    console.log(toc)
-    console.log(layoutProps)
+    // console.log(toc)
+    // console.log(layoutProps)
 
-    const tracker = useScrollTracker();
+    // const tracker = useScrollTracker();
 
     return (
         // <CommonLayout {...layoutProps}>

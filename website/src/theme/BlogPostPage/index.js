@@ -12,7 +12,7 @@ import {
 import BlogPostPageMetadata from "@theme/BlogPostPage/Metadata";
 import { BlogTOC } from "../../custom-theme/blog-toc";
 
-import { BlogPostPageView, PostPaginator } from "../../components/blog";
+import { BlogPostPageView } from "../../components/blog";
 import {CustomBlogLayout} from "../../custom-theme/blog-layout";
 
 function BlogPostPageContent({ children }) {
