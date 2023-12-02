@@ -23,6 +23,8 @@ const sidebars = {
     'desktop/wing/Get start',
     'desktop/wing/User guide',
     'desktop/wing/Develop guide',
+    'desktop/wing/readme-manager',
+    'desktop/wing/readme-developer',
   ],
 
   tinyui: [
@@ -33,90 +35,69 @@ const sidebars = {
 
   cabin: [
     'desktop/cabin/Introduce',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      collapsed: false,
-      items: [
-        'desktop/cabin/get-start'
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Tutorial',
+    //   collapsed: false,
+    //   items: [
+    //     'desktop/cabin/get-start'
+    //   ],
+    // },
   ],
 
   mobtools: [
     'desktop/mobtools/Introduce',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      collapsed: false,
-      items: [
-        'desktop/mobtools/get-start'
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Tutorial',
+    //   collapsed: false,
+    //   items: [
+    //     'desktop/mobtools/get-start'
+    //   ],
+    // },
   ],
 
   binderceptor: [
     'mobile/binderceptor/Introduce',
+    'mobile/binderceptor/sdk',
   ],
 
   konker: [
     'mobile/konker/Introduce',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      collapsed: false,
-      items: [
-        'mobile/konker/get-start'
-      ],
-    },
   ],
 
-  packer: [
-    'mobile/packer/Introduce',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      collapsed: false,
-      items: [
-        'mobile/packer/get-start'
-      ],
-    },
+  packit: [
+    'mobile/packit/Introduce',
   ],
 
   testbot: [
     'services/testbot/Introduce',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      collapsed: false,
-      items: [
-        'services/testbot/get-start'
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Tutorial',
+    //   collapsed: false,
+    //   items: [
+    //     'services/testbot/get-start'
+    //   ],
+    // },
+  ],
+
+  glacier: [
+    'services/glacier/Introduce',
   ],
 
   publishing: [
     'services/publishing/Introduce',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      collapsed: false,
-      items: [
-        'services/publishing/get-start'
-      ],
-    },
   ],
 
   udid: [
     'services/udid/Introduce',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      collapsed: false,
-      items: [
-        'services/udid/get-start'
-      ],
-    },
+  ],
+
+  about: [
+    'about/Introduce',
+    'about/team',
+    'about/privacy',
   ],
 };
 

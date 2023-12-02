@@ -49,16 +49,16 @@ function EditMetaRow({
                     Edit this page
                 </a>
             </div>
-            <div
-                className={clsx(
-                    "text-gray-500",
-                    "text-xs leading-4 content-4xl:text-base content-4xl:leading-6",
-                )}
-            >
-                <span>Last updated on </span>
-                <span>{formattedLastUpdatedAt} </span>
-                <span>by {lastUpdatedBy}</span>
-            </div>
+            {/*<div*/}
+            {/*    className={clsx(*/}
+            {/*        "text-gray-500",*/}
+            {/*        "text-xs leading-4 content-4xl:text-base content-4xl:leading-6",*/}
+            {/*    )}*/}
+            {/*>*/}
+            {/*    <span>Last updated on </span>*/}
+            {/*    <span>{formattedLastUpdatedAt} </span>*/}
+            {/*    <span>by {lastUpdatedBy}</span>*/}
+            {/*</div>*/}
         </div>
     );
 }

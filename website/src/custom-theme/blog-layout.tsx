@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import LayoutProvider from "@theme/Layout/Provider";
 import {CommonHeader} from "./common-header";
+import Footer from '@theme/Footer';
 
 export const CustomBlogLayout = (props: any) => {
     const { children, toc, ...layoutProps } = props;
@@ -48,6 +49,7 @@ export const CustomBlogLayout = (props: any) => {
                     </div>
                 )}
             </div>
+            <Footer />
         </LayoutProvider>
         // </Layout>
     );

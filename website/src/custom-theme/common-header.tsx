@@ -66,7 +66,7 @@ export const CommonHeader = ({ trackProgress }: Props) => {
                             )}
                         >
                             <Link to="/">
-                                <img src="/img/logo.png" className="text-gray-900 dark:text-gray-0" />
+                                <img src="/img/logo-dark.png" className="text-gray-900 dark:text-gray-0" />
                             </Link>
                         </div>
                         <div style={{ width: '40px', height: '100%' }}></div>

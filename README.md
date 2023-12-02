@@ -23,6 +23,12 @@ This is our official website [iofomo](https://www.iofomo.com) .
 
 ![](doc/README.assets/2.png)
 
+![](doc/README.assets/3.png)
+
+![](doc/README.assets/4.png)
+
+![](doc/README.assets/5.png)
+
 ### Get Start
 
 #### Installation

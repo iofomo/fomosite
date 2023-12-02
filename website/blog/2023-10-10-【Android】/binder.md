@@ -7,7 +7,9 @@ tags: [Android, Binder]
 
 # 深入Binder拦截
 
->Android平台进程Binder模块的动态分析和扩展。
+>基于底层动态拦截技术，实现对Android平台下应用进程Binder通信协议的动态分析和拦截。
+
+[☞ Github ☜](https://www.github.com/iofomo/binderceptor)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/binderceptor)
 
 ### 说明
 
@@ -136,11 +138,11 @@ if (null != pxy) {
 
 `但是：`这样的方案并不能拦截进程中所有的`Binder`服务。我们面临几大问题：
 
-1.  首先Android源码越来越庞大，了解所有的服务并不可能，因此有哪些服务已经被缓存排查非常困难。
+1.  首先，Android源码越来越庞大，了解所有的服务工作量很大，因此有哪些服务已经被缓存排查非常困难。
 
-2.  其次厂商越来越钟情于扩展自定义服务，这些服务不开源，识别和适配更加耗时。
+2.  其次，厂商越来越钟情于扩展自定义服务，这些服务不开源，识别和适配更加耗时。
 
-3.  再次有一部分服务只有`native`实现，并不能通过`Java`层的接口代理进行拦截（如：`Sensor/Audio/Video/Camera服务等`）。
+3.  再次，有一部分服务只有`native`实现，并不能通过`Java`层的接口代理进行拦截（如：`Sensor/Audio/Video/Camera服务等`）。
     ```c
     // source code: http://aospxref.com/android-13.0.0_r3/xref/frameworks/av/camera/ICamera.cpp
     
@@ -164,7 +166,7 @@ if (null != pxy) {
     }
     ```
 
-### 基于底层拦截
+### 新方案：基于底层拦截
 
 #### 原理
 
@@ -182,7 +184,7 @@ if (null != pxy) {
 
 ##### 如何拦截
 
-`C/C++`层的函数拦截，并不像`Java`层一样系统提供了较为稳定的代理工具，在这里我们直接采用网上开源的`Hook`框架：
+`C/C++`层的函数拦截，并不像`Java`层一样系统提供了较为稳定的代理工具，在这里不是我们本期讨论的重点，可以直接采用网上开源的`Hook`框架：
 
 -   https://github.com/bytedance/android-inline-hook
 -   https://github.com/bytedance/bhook
@@ -225,7 +227,7 @@ int ioctl(int fildes, unsigned long request, ...);
 ```c
 // source code: http://aospxref.com/android-14.0.0_r2/xref/frameworks/native/libs/binder/IPCThreadState.cpp
 void IPCThreadState::threadDestructor(void *st) {
-		ioctl(self->mProcess->mDriverFD, BINDER_THREAD_EXIT, 0);
+	ioctl(self->mProcess->mDriverFD, BINDER_THREAD_EXIT, 0);
 }
 
 status_t IPCThreadState::getProcessFreezeInfo(pid_t pid, uint32_t *sync_received, uint32_t *async_received) {
@@ -242,7 +244,7 @@ void IPCThreadState::logExtendedError() {
 
 status_t IPCThreadState::talkWithDriver(bool doReceive) {
     // 实际Binder调用通信
-		return ioctl(mProcess->mDriverFD, BINDER_WRITE_READ, &bwr);
+    return ioctl(mProcess->mDriverFD, BINDER_WRITE_READ, &bwr);
 }
 ```
 
@@ -250,7 +252,7 @@ status_t IPCThreadState::talkWithDriver(bool doReceive) {
 
 ```c
 static int ioctl_hook(int fd, int cmd, void* arg) {
-		if (cmd != BINDER_WRITE_READ || !arg || g_ioctl_disabled) {
+    if (cmd != BINDER_WRITE_READ || !arg || g_ioctl_disabled) {
         return g_ioctl_func(fd, cmd, arg);
     }
 }
@@ -296,9 +298,9 @@ struct binder_write_read {
  	binder_uintptr_t write_buffer;// call data
   
 	// 结果返回数据
- binder_size_t read_size;// recv data
- binder_size_t read_consumed;// recv data
- binder_uintptr_t read_buffer;// recv data
+ 	binder_size_t read_size;// recv data
+ 	binder_size_t read_consumed;// recv data
+ 	binder_uintptr_t read_buffer;// recv data
 };
 ```
 
@@ -320,30 +322,15 @@ void binder_find_for_bc(struct binder_write_read& bwr) {
 `dump`数据如下：
 
 ```
-Trace   : read_buffer:0xb400007131d9d200, read_consumed:0, read_size:256
-Trace   : 00000000:  0c 72 00 00 06 72 00 00  03 72 40 80 00 00 00 00  .r...r...r@.....
-Trace   : 00000010:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ................
-Trace   : 00000020:  00 00 00 00 00 00 00 00  e8 03 00 00 08 00 00 00  ................
-Trace   : 00000030:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 3e 1a  ..............>.
-Trace   : 00000040:  71 00 00 00 08 00 3e 1a  71 00 00 00 00 00 00 00  q.....>.q.......
-Trace   : 00000050:  e8 03 00 00 08 00 00 00  00 00 00 00 00 00 00 00  ................
-Trace   : 00000060:  00 00 00 00 00 00 3e 1a  71 00 00 00 08 00 3e 1a  ......>.q.....>.
-Trace   : 00000070:  71 00 00 00 00 00 00 00  58 c9 e6 6f 00 00 00 00  q.......X..o....
-Trace   : 00000080:  b0 c9 e6 6f 00 00 00 00  f0 c9 e6 6f 00 00 00 00  ...o.......o....
-Trace   : 00000090:  6c c9 e6 6f 00 00 00 00  e0 c9 e6 6f 00 00 00 00  l..o.......o....
-Trace   : 000000a0:  10 ca e6 6f 00 00 00 00  7c c9 e6 6f 00 00 00 00  ...o....|..o....
-Trace   : 000000b0:  f4 ca e6 6f 00 00 00 00  04 cb e6 6f 00 00 00 00  ...o.......o....
-Trace   : 000000c0:  14 cb e6 6f 00 00 00 00  e4 ca e6 6f 00 00 00 00  ...o.......o....
-Trace   : 000000d0:  24 cb e6 6f 00 00 00 00  0c dc e6 6f 00 00 00 00  $..o.......o....
-Trace   : 000000e0:  1c dc e6 6f 00 00 00 00  3c dc e6 6f 00 00 00 00  ...o....<..o....
-Trace   : 000000f0:  24 49 e6 6f 00 00 00 00  f0 de fd 6f 00 00 00 00  $I.o.......o....
-
-Trace   : write_buffer:0xb400007131d9d100, write_consumed:0, write_size:68
-Trace   : 00000000:  00 63 40 40 07 00 00 00  00 00 00 00 00 00 00 00  .c@@............
-Trace   : 00000010:  00 00 00 00 05 00 00 00  12 00 00 00 00 00 00 00  ................
-Trace   : 00000020:  00 00 00 00 48 00 00 00  00 00 00 00 00 00 00 00  ....H...........
-Trace   : 00000030:  00 00 00 00 00 f2 d9 07  71 00 00 b4 00 00 00 00  ........q.......
-Trace   : 00000040:  00 00 00 00                                       ....
+write_buffer:0xb400007107d1d400, write_consumed:68, write_size:68
+00000000:  00 63 40 40 14 00 00 00  00 00 00 00 00 00 00 00  .c@@............
+00000010:  00 00 00 00 01 00 00 00  12 00 00 00 00 00 00 00  ................
+00000020:  00 00 00 00 54 00 00 00  00 00 00 00 00 00 00 00  ....T...........
+00000030:  00 00 00 00 00 4d 3a ac  70 00 00 b4 00 00 00 00  .....M:.p.......
+00000040:  00 00 00 00                                       ....
+BR_NOOP: 0x720c
+BR_TRANSACTION_COMPLETE: 0x7206
+BR_REPLY: 0
 ```
 
 ##### 解析`txn`
@@ -372,7 +359,7 @@ struct binder_transaction_data {
          binder_uintptr_t offsets;// Binder方法参数对象数据地址
      } ptr;
      __u8 buf[8];
- 		 } data;
+ } data;
 };
 ```
 
@@ -439,7 +426,7 @@ class IDemo$Stub {
 
 因此我们可以通过反射的方式，找到服务名对应的类所有静态成员变量，然后找到与`code`值相等的成员即为此方法。
 
->这里需要解决私有API的限制解除问题。
+>这里可能需要解决私有API的限制解除问题。
 
 ```java
 // 可直接使用工程工具类
@@ -506,7 +493,7 @@ void recycle(JNIEnv* env) {
 public static void clearHttpLink(Parcel p/*IN*/, Parcel q/*OUT*/) {
     try {
         Intent ii = Intent.CREATOR.createFromParcel(pp);
-				// TODO something ...
+		// TODO something ...
       	
         // write new data
         q.appendFrom(p, p.dataPosition(), p.dataAvail());
@@ -578,11 +565,11 @@ case BC_FREE_BUFFER:
 
 ### 附：
 
-如果你有需要，可以直接使用我们已经封装好的`SDK`来实现响应的功能，链接地址如下：
+如果你有需要，可以直接使用我们已经封装好的`SDK`来实现相应的功能，该项目已经开源，链接地址如下：
 
-  Gitee：https://gitee.com/iofomo/binderceptor
+[Gitee](https://gitee.com/iofomo/binderceptor)
 
-Github：https://github.com/iofomo/binderceptor
+[Github](https://github.com/iofomo/binderceptor)
 
 
 

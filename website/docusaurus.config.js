@@ -77,7 +77,7 @@ const config = {
         // title: 'iofomo',
         logo: {
           alt: 'iofomo Logo',
-          src: 'img/logo.png',
+          src: 'img/logo-dark.png',
           href: '/',
           target: '_self',
         },
@@ -119,8 +119,8 @@ const config = {
                 label: 'Konker',
               },
               {
-                href: '/docs/mobile/packer/Introduce/',
-                label: 'Packer',
+                href: '/docs/mobile/packit/Introduce/',
+                label: 'Packit',
               },
             ]
           },
@@ -185,8 +185,9 @@ const config = {
             title: "iofomo",
             items: [
               {
-                label: '一个开源小组织',
-                "to": "/"
+                label: 'One leaf, one bodhi, one flower, one world.',
+                target: '_blank',
+                "to": "https://book.douban.com/review/5045014/"
               },
             ],
           },
@@ -255,11 +256,11 @@ const config = {
             items: [
               {
                 label: '关于我们',
-                to: '/blog',
+                to: '/docs/about/Introduce',
               },
               {
                 label: '隐私协议',
-                to: 'https://github.com/iofomo/fomosite',
+                to: '/docs/about/privacy',
               },
             ],
           },

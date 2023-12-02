@@ -1,5 +1,7 @@
 # Wing
 
+[☞ Github ☜](https://www.github.com/iofomo/wing)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/wing)
+
 ### 说明
 
 `wing`是一个代码同步管理工具类似`repo`，具有以下特性：
@@ -253,6 +255,6 @@ $ wing init test master admin.xml
 
 ### 许可协议
 
-本项目基于`MIT`许可协议，详情查看 [许可协议](https://gitee.com/iofomo/wing/blob/master/doc/LICENSE) 文档。
+本项目基于`MIT`许可协议，详情查看 [许可协议](/docs/about/privacy) 文档。
 
 >   本项目和所有的工具都是MIT许可证下的开源工具，这意味着你可以完全访问源代码，并可以根据自己的需求进行修改。

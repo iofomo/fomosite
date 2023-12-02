@@ -1,5 +1,3 @@
----
-sidebar_position: 1
----
-
 # MobTools
+
+>项目即将上线并开源，敬请期待 ······

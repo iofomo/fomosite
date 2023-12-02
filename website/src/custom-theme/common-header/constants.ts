@@ -38,7 +38,7 @@ export const MENU_ITEMS: MenuItemType[] = [
             },
             {
                 label: "MobTools",
-                description: "移动设备操作工具",
+                description: "操作移动设备工具集",
                 link: "/docs/desktop/mobtools/Introduce/",
             },
         ],
@@ -58,9 +58,9 @@ export const MENU_ITEMS: MenuItemType[] = [
                 link: "/docs/mobile/konker/Introduce/",
             },
             {
-                label: "Packer",
-                description: "Android和iOS平台应用重打包工具",
-                link: "/docs/mobile/packer/Introduce/",
+                label: "Packit",
+                description: "Android和iOS平台应用包二次开发框架",
+                link: "/docs/mobile/packit/Introduce/",
             },
         ],
     },
@@ -69,19 +69,19 @@ export const MENU_ITEMS: MenuItemType[] = [
         label: "服务",
         items: [
             {
+              label: "Glacier",
+              description: "基于公有云和ARM虚拟化技术实现一机多开",
+              link: "/docs/services/glacier/Introduce/",
+            },
+            {
                 label: "Publishing APP",
-                description: "移动端应用分发服务",
+                description: "移动平台应用分发服务",
                 link: "/docs/services/publishing/Introduce/",
             },
             {
                 label: "Get UDID",
                 description: "iOS设备序列号获取服务",
                 link: "/docs/services/udid/Introduce/",
-            },
-            {
-                label: "TestBot",
-                description: "应用自动化测试服务",
-                link: "/docs/services/testbot/Introduce/",
             },
         ],
     },
