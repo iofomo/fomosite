@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9151],{8350:e=>{e.exports=JSON.parse('{"label":"TF-Card","permalink":"/blog/tags/tf-card","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
