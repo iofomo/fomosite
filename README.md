@@ -10,7 +10,7 @@
 </p>
 
 
-### Instruction
+## Instruction
 
 This website is built using [Docusaurus 3](https://v3.docusaurus.io/), a modern static website generator. 
 
@@ -21,35 +21,35 @@ This is our first web development, and it is because of the following open-sourc
 
 This is our official website [iofomo](https://www.iofomo.com) .
 
-#### Home
+### Home
 
 ![](doc/README.assets/2.png)
 
-#### Document
+### Document
 
 ![](doc/README.assets/3.png)
 
-#### Blog home
+### Blog index
 
 ![](doc/README.assets/4.png)
 
-#### Blog content
+### Blog content
 
 ![](doc/README.assets/5.png)
 
-#### Mobile menu
+### Mobile menu
 
 ![](doc/README.assets/6.jpg)
 
-### Get Start
+## Get Start
 
-#### Installation
+### Installation
 
 ```shell
 $ ./make.sh install
 ```
 
-#### Local Development
+### Local Development
 
 ```shell
 $ ./make.sh start
@@ -57,7 +57,7 @@ $ ./make.sh start
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
-#### Build
+### Build
 
 ```shell
 $ ./make.sh build
@@ -65,7 +65,7 @@ $ ./make.sh build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-#### Deployment
+### Deployment
 
 ```shell
 GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
@@ -73,7 +73,11 @@ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
-### LICENSE
+## Thanks
+
+![](doc/README.assets/thanks.png)
+
+## LICENSE
 
 This project is licensed under the terms of the `MIT` license. See the [LICENSE](doc/LICENSE) file.
 
