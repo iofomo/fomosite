@@ -96,7 +96,6 @@ const sidebars = {
 
   about: [
     'about/Introduce',
-    'about/team',
     'about/privacy',
   ],
 };
