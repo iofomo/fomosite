@@ -7,6 +7,8 @@ import {CommonThemeToggle} from "./common-theme-toggle";
 import {LandingGiteeStarButton} from "./landing-gitee-star-button";
 import {LandingGithubStarButton} from "./landing-github-star-button";
 import SearchBar from '@theme/NavbarItem/SearchNavbarItem';
+import { MobileMenuModal } from "./common-header/mobile-menu-modal";
+import { HamburgerIcon } from "./icons/hamburger";
 
 type Props = {
     hasSticky?: boolean;
@@ -14,6 +16,8 @@ type Props = {
 };
 
 export const CommonHeader = ({ trackProgress }: Props) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <>
             <header className={clsx("sticky", "top-0", "z-10")}>
@@ -70,6 +74,16 @@ export const CommonHeader = ({ trackProgress }: Props) => {
                             </Link>
                         </div>
                         <div style={{ width: '40px', height: '100%' }}></div>
+                        <button
+                            type="button"
+                            className={clsx(
+                                "text-gray-900 dark:text-gray-0",
+                                "block landing-md:hidden",
+                            )}
+                            onClick={() => setIsModalOpen(true)}
+                        >
+                            <HamburgerIcon />
+                        </button>
                         <div
                             className={clsx(
                                 "hidden landing-md:flex",
@@ -96,6 +110,10 @@ export const CommonHeader = ({ trackProgress }: Props) => {
                             <LandingGiteeStarButton />
                             <CommonThemeToggle />
                         </div>
+                        <MobileMenuModal
+                            isModalOpen={isModalOpen}
+                            setIsModalOpen={setIsModalOpen}
+                        />
                     </div>
                 </div>
             </header>

@@ -565,11 +565,7 @@ case BC_FREE_BUFFER:
 
 ### 附：
 
-如果你有需要，可以直接使用我们已经封装好的`SDK`来实现相应的功能，该项目已经开源，链接地址如下：
-
-[Gitee](https://gitee.com/iofomo/binderceptor)
-
-[Github](https://github.com/iofomo/binderceptor)
+如果你有需要，可以直接使用我们已经封装好的`SDK`来实现相应的功能，该项目已经开源，可以直接使用，参考[【集成文档】](https://www.iofomo.com/docs/mobile/binderceptor/sdk)。
 
 
 

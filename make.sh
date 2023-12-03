@@ -9,10 +9,10 @@ set -e
 if [[ $1 == "install" ]] ; then
   cd website && yarn $1
 elif [[ $1 == "start" ]] ; then
-#  cd website && npm run serve
-  cd website && yarn start
+  cd website && npm run serve
+#  cd website && yarn start
 else
-#  cd website && npm run $1
-  cd website && yarn $1
+  cd website && npm run $1
+#  cd website && yarn $1
 fi
 

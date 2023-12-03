@@ -196,7 +196,7 @@
 
     & .feat {
       display: flex;
-      height: 100vh;
+      height: 90vh;
 
       & .left,
       & .right {
@@ -241,8 +241,8 @@
       }
 
       & .left2 {
-        padding-right: 17%;
-        justify-content: flex-end;
+        padding-left: 5%;
+        justify-content: flex-start;
         align-items: center;
 
         & > section {
@@ -284,10 +284,11 @@
       }
 
       & .right2 {
-        flex-shrink: 0;
+        justify-content: flex-end;
+        align-items: center;
 
         img {
-          object-position: left top;
+          object-position: right top;
           object-fit: cover;
           height: 80vh;
           align-self: center;
