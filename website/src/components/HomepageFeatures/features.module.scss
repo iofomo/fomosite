@@ -1,5 +1,19 @@
 @import "./util";
 
+.buttonLink {
+  display: inline-block;
+  padding: 4px 20px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border-radius: 16px;
+  font-weight: bold;
+}
+
+.buttonLink:hover {
+  background-color: #333;
+}
+
 .dashboardLink {
   color: hsl(0deg 0% 80%);
   width: fit-content;
@@ -222,6 +236,7 @@
 
           h2 {
             font-size: 2.5rem;
+            font-weight: bold;
             font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New';
             margin-bottom: 10px;
           }
@@ -252,6 +267,7 @@
 
           h2 {
             font-size: 2.5rem;
+            font-weight: bold;
             font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New';
             margin-bottom: 10px;
           }
@@ -315,6 +331,13 @@
           padding: 0 10%;
         }
 
+        & .left2,
+        & .right2 {
+          width: 100%;
+          justify-content: flex-end;
+          padding: 0 10%;
+        }
+
         & .left {
           & > section {
             width: auto;
@@ -325,7 +348,25 @@
           }
         }
 
+        & .left2 {
+          & > section {
+            width: auto;
+
+            div {
+              margin-bottom: 0;
+            }
+          }
+        }
+
         & .right {
+          img {
+            height: 50vh;
+            //border-radius: 1rem;
+            margin: 1rem 0 4rem;
+          }
+        }
+
+        & .right2 {
           img {
             height: 50vh;
             //border-radius: 1rem;
@@ -362,7 +403,20 @@
           padding: 0;
         }
 
+        & .left2,
+        & .right2 {
+          padding: 0;
+        }
+
         & .left {
+          & > section {
+            h2 {
+              font-size: 2.25rem;
+            }
+          }
+        }
+
+        & .left2 {
           & > section {
             h2 {
               font-size: 2.25rem;

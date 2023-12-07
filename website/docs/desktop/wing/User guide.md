@@ -1,5 +1,7 @@
 # 操作指南
 
+[☞ Github ☜](https://www.github.com/iofomo/wing)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/wing)
+
 ### 基础命令
 
 ##### 查看版本

@@ -225,9 +225,9 @@ const config = {
                 to: 'https://juejin.cn/user/3424295591361992/posts',
               },
               {
-                label: '简书',
+                label: 'InfoQ',
                 target: '_blank',
-                to: 'https://www.jianshu.com/u/aaf9e93735b9',
+                to: 'https://www.infoq.cn/profile/872DAFF5518221/publish',
               },
             ],
           },
@@ -245,9 +245,9 @@ const config = {
                 to: 'https://www.github.com/iofomo',
               },
               {
-                label: 'Docusaurus',
+                label: 'OSChina',
                 target: '_blank',
-                to: 'https://www.docusaurus.io',
+                to: 'https://my.oschina.net/u/7011421',
               },
             ],
           },

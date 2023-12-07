@@ -1,5 +1,7 @@
 # 操作指南
 
+[☞ Github ☜](https://www.github.com/iofomo/tinyui)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/tinyui)
+
 ### 环境（已配置则忽略）
 
 ##### 1）系统

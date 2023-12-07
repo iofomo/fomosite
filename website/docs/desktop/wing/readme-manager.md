@@ -1,5 +1,7 @@
 # 负责人篇
 
+[☞ Github ☜](https://www.github.com/iofomo/wing)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/wing)
+
 ### 说明
 
 负责人通常维护整个团队的开发环境，因此负责项目或产品的开发环境搭建，让团队成员或者新人可以快速便捷的进行开发。

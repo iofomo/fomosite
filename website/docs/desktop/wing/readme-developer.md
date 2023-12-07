@@ -1,5 +1,7 @@
 # 成员篇
 
+[☞ Github ☜](https://www.github.com/iofomo/wing)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/wing)
+
 ### 说明
 
 此文档目的是让团队成员快速进行开发环境配置，前提条件为已安装和配置`wing`。这里以项目`demo`为例。

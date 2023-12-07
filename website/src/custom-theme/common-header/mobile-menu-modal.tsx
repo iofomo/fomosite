@@ -244,7 +244,7 @@ const Github = (props: { id?: string }) => {
                 <div
                     className={clsx("ml-4", "dark:text-gray-400 text-gray-600")}
                 >
-                    如果对你有帮助，别忘了给我们一颗小 ☆★☆ !
+                    如果你喜欢，别忘了给我们一颗 ⭐
                 </div>
             </div>
         </Link>

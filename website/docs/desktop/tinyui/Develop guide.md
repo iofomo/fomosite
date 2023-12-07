@@ -1,5 +1,7 @@
 # 开发指南
 
+[☞ Github ☜](https://www.github.com/iofomo/tinyui)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/tinyui)
+
 ### 工程说明
 
 ![](./img/107.png)

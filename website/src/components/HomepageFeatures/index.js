@@ -7,7 +7,7 @@ import styles from './features.module.scss';
 function GotoLink({Url, UrlGitee, UrlGithub}) {
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '70px'}}>
-            <a href={Url} style={{ alignSelf: 'center', color: 'deepskyblue' }}>更多 >>></a>
+            <a href={Url} className={styles.buttonLink}>更多 >>></a>
             <div style={{ display: 'flex', justifyContent: 'space-between', width:'70px'}}>
                 <a href={UrlGithub} style={{ width:'26px', height:'26px' }} target="_blank">
                     <img src="/img/github-blue.svg"/>
@@ -26,7 +26,7 @@ function DashboardItem1() {
             <div className={styles.left}>
                 <section>
                     <h2>
-                        <Translate id="features.component.userFlexible.title">Wing</Translate>
+                        <Translate id="features.component.dashboarditem1.title">Wing</Translate>
                     </h2>
                     <div>
                         <p>Wing是一款轻量快捷的团队开发协作工具。</p>
@@ -64,7 +64,7 @@ function DashboardItem2() {
             <div className={styles.left2}>
                 <section>
                     <h2>
-                        <Translate id="features.component.userFlexible.title">Binderceptor</Translate>
+                        <Translate id="features.component.dashboarditem2.title">Binderceptor</Translate>
                     </h2>
                     <div>
                         <p>Binderceptor是一个Android平台Binder通信拦截器。</p>
@@ -90,7 +90,7 @@ function DashboardItem3() {
             <div className={styles.left}>
                 <section>
                     <h2>
-                        <Translate id="features.component.pluginised.title">Tinyui</Translate>
+                        <Translate id="features.component.dashboarditem3.title">Tinyui</Translate>
                     </h2>
                     <div>
                         <p>Tinyui是一个极简的跨平台桌面客户端开发框架。</p>
@@ -131,7 +131,7 @@ function DashboardItem4() {
             <div className={styles.left2}>
                 <section>
                     <h2>
-                        <Translate id="features.component.userFlexible.title">Packit</Translate>
+                        <Translate id="features.component.dashboarditem4.title">Packit</Translate>
                     </h2>
                     <div>
                         <p>Packit是移动端应用安装包二次开发工具。</p>

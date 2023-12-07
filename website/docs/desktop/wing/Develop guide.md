@@ -1,5 +1,7 @@
 # 开发指南
 
+[☞ Github ☜](https://www.github.com/iofomo/wing)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/wing)
+
 ### 说明
 
 本文档旨在从技术负责人的角度，更好的根据项目或产品实际情况配置和管理好开发空间。并且可以根据自身的业务和开发习惯扩展新的命令。

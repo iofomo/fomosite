@@ -1,5 +1,7 @@
 # 开始使用
 
+[☞ Github ☜](https://www.github.com/iofomo/wing)　　[☞ Gitee ☜](https://www.gitee.com/iofomo/wing)
+
 ### 配置
 
 ##### 安装
